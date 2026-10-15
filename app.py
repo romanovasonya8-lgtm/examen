@@ -68,11 +68,11 @@ def open_login():
     clear_screen()
     make_title("Вход в систему")
 
-    make_label("Логин").pack(fill="x")
+    make_label("Логин")
     ENTRY_LOGIN = make_entry()
     ENTRY_LOGIN.pack(fill="x", pady=(0, 8))
 
-    make_label("Пароль").pack(fill="x")
+    make_label("Пароль")
     entry_pass = make_entry(password=True)
     entry_pass.pack(fill="x", pady=(0, 4))
 
@@ -89,17 +89,17 @@ def open_user():
 
 def open_edit_user():
     clear_screen()
-    make_title("Изменение пользователя").pack(pady=(0, 10))
+    make_title("Изменение пользователя")
 
     make_label("ФИО")
     e_name = make_entry()
     e_name.pack(fill="x", pady=(0, 8))
 
-    make_label("Пароль").pack(fill="x")
+    make_label("Пароль")
     e_pass = make_entry()
     e_pass.pack(fill="x", pady=(0, 8))
 
-    make_label("Роль").pack(fill="x")
+    make_label("Роль")
     combo_role = ttk.Combobox(container, values=["Пользователь", "Администратор"],
                               state="readonly", font=FONT_BUTTON)
     combo_role.pack(fill="x", pady=(0, 10))
@@ -113,7 +113,7 @@ def open_edit_user():
 
 def open_admin():
     clear_screen()
-    make_title("Панель администратора").pack(pady=(0, 5))
+    make_title("Панель администратора")
         #make_label("Пароль").pack(fill="x")
 
     row = tk.Frame(container, bg=BG)
@@ -125,20 +125,19 @@ def open_admin():
 def save_user(login, password, role, full_name):
     open_admin()
 
-
 def open_add_user():
     clear_screen()
-    make_title("Новый пользователь").pack(pady=(0, 15))
+    make_title("Новый пользователь")
 
-    make_label("Логин").pack(fill="x")
+    make_label("Логин")
     e_login = make_entry()
     e_login.pack(fill="x", pady=(0, 10))
 
-    make_label("ФИО").pack(fill="x")
+    make_label("ФИО")
     e_name = make_entry()
     e_name.pack(fill="x", pady=(0, 10))
 
-    make_label("Пароль").pack(fill="x")
+    make_label("Пароль")
     e_pass = make_entry()
     e_pass.pack(fill="x", pady=(0, 10))
     make_button("Сохранить",open_admin ).pack(fill="x", ipady=6)
